@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amponsah Boadi Stanley | IT Professional</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Custom Tailwind config + extra styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:      '#080c10',
+            bg2:     '#0d1318',
+            card:    '#0f1923',
+            border:  '#1e2d3d',
+            accent:  '#00d4ff',
+            accent2: '#00ff9f',
+            accent3: '#ff6b35',
+            muted:   '#5a7a94',
+            dim:     '#2a3f52',
+          },
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            mono: ['DM Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-bg text-white font-mono overflow-x-hidden">
+
+  <!-- Custom cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursorRing" class="cursor-ring"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-5 bg-bg/85 backdrop-blur-md border-b border-border">
+    <div class="font-syne font-extrabold text-lg text-accent tracking-tight">
+      ABS<span class="text-white">.</span>
+    </div>
+    <ul class="hidden md:flex gap-8 list-none">
+      <li><a href="#about"     class="nav-link">About</a></li>
+      <li><a href="#skills"    class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#contact"   class="nav-link">Contact</a></li>
+    </ul>
+    <div class="w-2 h-2 rounded-full bg-accent2 animate-pulse"></div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="home" class="relative min-h-screen flex items-center px-12 pt-32 pb-20 overflow-hidden">
+    <div class="hero-grid absolute inset-0"></div>
+    <div class="hero-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-4xl">
+      <div class="hero-tag inline-flex items-center gap-2 text-accent text-xs tracking-widest uppercase border border-border px-4 py-1.5 rounded-sm mb-8 bg-accent/5 fade-up">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+        
+      </div>
+
+      <h1 class="font-syne font-extrabold leading-none tracking-tighter mb-6 fade-up delay-100"
+          style="font-size: clamp(48px, 8vw, 96px)">
+        <span class="block text-white">Amponsah Boadi</span>
+        <span class="block gradient-text">Stanley</span>
+      </h1>
+
+      <p class="text-xs tracking-[4px] uppercase text-muted mb-8 fade-up delay-200">
+        IT Professional &nbsp;/&nbsp; Computer Science Student
+      </p>
+
+      <p class="text-sm text-muted leading-relaxed max-w-xl mb-12 fade-up delay-300">
+        A driven 3rd-year Computer Science student at Kumasi Technical University,
+        passionate about building functional digital solutions through frontend development,
+        mobile applications, and technology systems.
+      </p>
+
+      <div class="flex flex-wrap gap-4 fade-up delay-400">
+        <a href="#contact" class="btn-primary">Get In Touch →</a>
+        <a href="https://github.com/StanleyAmponsah" target="_blank" class="btn-secondary">⌥ GitHub Profile</a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-10 left-12 flex items-center gap-3 text-xs tracking-widest uppercase text-muted">
+      <div class="scroll-line"></div>
+      Scroll to explore
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="px-12 py-24">
+    <div class="flex items-center gap-5 mb-16 reveal">
+      <span class="text-xs tracking-[3px] uppercase text-accent">01</span>
+      <div class="w-20 h-px bg-border"></div>
+      <h2 class="font-syne font-bold text-4xl tracking-tight">About Me</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+      <div class="space-y-5 reveal">
+        <p class="text-sm text-muted leading-loose">
+          I'm <span class="text-accent">Amponsah Boadi Stanley</span>, a Computer Science student at
+          Kumasi Technical University, currently in Level 300 and actively
+          seeking opportunities to grow in a professional IT environment.
+        </p>
+        <p class="text-sm text-muted leading-loose">
+          My interests span across <span class="text-accent">frontend web development</span>,
+          <span class="text-accent">Android mobile applications</span>, and general IT systems.
+          I enjoy turning ideas into working digital products that solve real problems.
+        </p>
+        <p class="text-sm text-muted leading-loose">
+          I am hardworking, fast to learn new technologies, and committed to
+          delivering quality in everything I build.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-0.5 reveal">
+        <div class="stat-card">
+          <div class="font-syne font-extrabold text-4xl text-accent leading-none mb-2">3rd</div>
+          <div class="text-xs tracking-widest uppercase text-muted">Year of Study</div>
+        </div>
+        <div class="stat-card">
+          <div class="font-syne font-extrabold text-4xl text-accent leading-none mb-2">KTU</div>
+          <div class="text-xs tracking-widest uppercase text-muted">University</div>
+        </div>
+        <div class="stat-card">
+          <div class="font-syne font-extrabold text-4xl text-accent leading-none mb-2">5+</div>
+          <div class="text-xs tracking-widest uppercase text-muted">Technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="font-syne font-extrabold text-4xl text-accent leading-none mb-2">2027</div>
+          <div class="text-xs tracking-widest uppercase text-muted">Graduating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="bg-bg2 px-12 py-24">
+    <div class="flex items-center gap-5 mb-16 reveal">
+      <span class="text-xs tracking-[3px] uppercase text-accent">02</span>
+      <div class="w-20 h-px bg-border"></div>
+      <h2 class="font-syne font-bold text-4xl tracking-tight">Skills</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-0.5">
+      <div class="skill-card reveal">
+        <div class="text-4xl mb-4">🌐</div>
+        <div class="font-syne font-bold text-lg mb-3">Frontend Development</div>
+        <p class="text-xs text-muted leading-relaxed mb-5">Building clean, responsive web interfaces with attention to structure and user experience.</p>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Tailwind</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="text-4xl mb-4">📱</div>
+        <div class="font-syne font-bold text-lg mb-3">Android Development</div>
+        <p class="text-xs text-muted leading-relaxed mb-5">Developing Android mobile applications using Android Studio and Java with database integration.</p>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Android Studio</span>
+          <span class="skill-tag">SQLite</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="text-4xl mb-4">🗄️</div>
+        <div class="font-syne font-bold text-lg mb-3">Database & Storage</div>
+        <p class="text-xs text-muted leading-relaxed mb-5">Working with structured data using SQL principles and SQLite for application data management.</p>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">Data Modelling</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="text-4xl mb-4">⚙️</div>
+        <div class="font-syne font-bold text-lg mb-3">Dev Tools</div>
+        <p class="text-xs text-muted leading-relaxed mb-5">Version control with Git and GitHub, basic software deployment and APK generation.</p>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Deployment</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section id="education" class="px-12 py-24">
+    <div class="flex items-center gap-5 mb-16 reveal">
+      <span class="text-xs tracking-[3px] uppercase text-accent">03</span>
+      <div class="w-20 h-px bg-border"></div>
+      <h2 class="font-syne font-bold text-4xl tracking-tight">Education</h2>
+    </div>
+
+    <div class="edu-card reveal max-w-3xl flex flex-col md:flex-row justify-between items-start gap-8">
+      <div>
+        <div class="font-syne font-bold text-2xl mb-2">BTech Computer Science</div>
+        <div class="text-accent text-sm tracking-wide mb-4">Kumasi Technical University — Kumasi, Ghana</div>
+        <div class="text-xs text-muted mb-5">Level 300 &nbsp;·&nbsp; Expected Graduation: 2027</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="course-tag">Android Development</span>
+          <span class="course-tag">Networking and Internet Secuirity</span>
+          <span class="course-tag">Database Systems</span>
+          <span class="course-tag">Software Engineering</span>
+          <span class="course-tag">Web Development</span>
+          <span class="course-tag">AI and Machine learning</span>
+        </div>
+      </div>
+      <div class="font-syne font-extrabold text-5xl text-dim shrink-0">KTU</div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="bg-bg2 px-12 py-24">
+    <div class="flex items-center gap-5 mb-16 reveal">
+      <span class="text-xs tracking-[3px] uppercase text-accent">04</span>
+      <div class="w-20 h-px bg-border"></div>
+      <h2 class="font-syne font-bold text-4xl tracking-tight">Contact</h2>
+    </div>
+
+    <div class="max-w-2xl">
+      <div class="font-syne font-bold leading-tight mb-6 reveal" style="font-size: clamp(28px, 4vw, 44px)">
+        Let's work<br/><span class="text-accent">together.</span>
+      </div>
+      <p class="text-sm text-muted mb-12 max-w-md reveal">
+        I'm currently open to internship opportunities across Ghana.
+        Feel free to reach out via any of the channels below.
+      </p>
+
+      <div class="flex flex-col gap-0.5">
+        <a href="tel:0595592489" class="contact-link reveal">
+          <div class="flex items-center gap-4">
+            <span class="text-xl">📞</span>
+            <div>
+              <div class="text-xs tracking-widest uppercase text-muted mb-0.5">Phone</div>
+              <div class="text-sm">0595592489</div>
+            </div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a href="mailto:amponsahstanley123@gmail.com" class="contact-link reveal">
+          <div class="flex items-center gap-4">
+            <span class="text-xl">✉️</span>
+            <div>
+              <div class="text-xs tracking-widest uppercase text-muted mb-0.5">Email</div>
+              <div class="text-sm">amponsahstanley123@gmail.com</div>
+            </div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a href="https://github.com/StanleyAmponsah" target="_blank" class="contact-link reveal">
+          <div class="flex items-center gap-4">
+            <span class="text-xl">⌥</span>
+            <div>
+              <div class="text-xs tracking-widest uppercase text-muted mb-0.5">GitHub</div>
+              <div class="text-sm">github.com/StanleyAmponsah</div>
+            </div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t border-border px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-muted">
+    <div>Built by <span class="text-accent">Amponsah Boadi Stanley</span> · 2025</div>
+    <div>BSc Computer Science · <span class="text-accent">KTU</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
