@@ -174,9 +174,6 @@ body.mobile-nav-open { overflow: hidden; }
   50%       { width: 20px; opacity: 0.4; }
 }
 
-/* ── Hero tag ── */
-.hero-tag { border-radius: 2px; }
-
 /* ── Stat cards ── */
 .stat-card {
   background: #0f1923;
