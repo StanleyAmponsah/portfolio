@@ -2,26 +2,35 @@
 // script.js — Stanley Portfolio
 // ===========================
 
-// ── Custom Cursor ──
-const cursor     = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
+// ── Mobile navigation ──
+const navToggle = document.getElementById('nav-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-document.addEventListener('mousemove', e => {
-  cursor.style.left     = e.clientX + 'px';
-  cursor.style.top      = e.clientY + 'px';
-  cursorRing.style.left = e.clientX + 'px';
-  cursorRing.style.top  = e.clientY + 'px';
+function setMobileNavOpen(open) {
+  if (!navToggle || !mobileMenu) return;
+  navToggle.classList.toggle('is-open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  mobileMenu.classList.toggle('is-open', open);
+  mobileMenu.setAttribute('aria-hidden', String(!open));
+  document.body.classList.toggle('mobile-nav-open', open);
+}
+
+navToggle?.addEventListener('click', () => {
+  const next = !mobileMenu.classList.contains('is-open');
+  setMobileNavOpen(next);
 });
 
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.classList.add('hovered');
-    cursorRing.classList.add('hovered');
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.classList.remove('hovered');
-    cursorRing.classList.remove('hovered');
-  });
+mobileMenu?.querySelectorAll('a').forEach((anchor) => {
+  anchor.addEventListener('click', () => setMobileNavOpen(false));
+});
+
+window.addEventListener('resize', () => {
+  if (window.matchMedia('(min-width: 768px)').matches) setMobileNavOpen(false);
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setMobileNavOpen(false);
 });
 
 // ── Scroll Reveal ──
